@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #617891;
+}
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100vh;
+  background-color: inherit;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 28px;
+  box-sizing: border-box;
+}
+.quote-box {
+  min-height: 60px;
+  margin-top: 12px;
+  font-style: italic;
+  color: #555;
+}
+
+/* ===== Sidebar Layout ===== */
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #25344f;
+  color: white;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.sidebar-title {
+  margin: 0 0 32px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navigation links */
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 00;
+
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  padding: 24px;
+  min-width: 0;
+  overflow-y: auto;
+}
+/* list of habit style */
+.habits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+}
+
+.habit-text {
+  cursor: pointer;
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: #000;
+}
+
+.habit-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  background-color: #632024;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/*form style*/
+.habit-form {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.habit-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font: inherit;
+}
+
+.habit-input:focus {
+  outline: none;
+  border-color: #d5b893;
+}
+
+.add-btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #d5b893;
+  color: white;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+/* QUOTE STYLE */
+.quote-section {
+  padding: 15px;
+  background: #fff8e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.quote-loading {
+  opacity: 0.7;
+}
+
+.quote-text {
+  margin: 0;
+}
+/*TITLE*/
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #632024;
+}
+/*WEATHER STYLE */
+.weather-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Day / Night themes */
+.weather-section.day {
+  background: #f0f4f8;
+  color: #111827;
+}
+
+.weather-section.night {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* Title */
+.weather-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Icons */
+.day-icon {
+  color: #facc15;
+}
+
+.night-icon {
+  color: #c7d2fe;
+}
+
+/* Content */
+.weather-content {
+  margin-top: 10px;
+}
+
+.weather-condition {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.weather-content p {
+  margin: 5px 0;
+}
+
+/* Advice */
+.weather-advice {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.advice-day {
+  color: #555;
+}
+
+.advice-night {
+  color: #cbd5f5;
+}
+
+/* Error */
+.weather-error {
+  color: red;
+}
+/*ANALITICS STYLE*/
+.analytics-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.analytics-title {
+  margin-bottom: 20px;
+}
+
+.analytics-cards {
+  display: flex;
+  gap: 20px;
+}
+
+/* Cartes génériques */
+.analytics-card {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-value {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Variantes de couleur */
+.analytics-card.total {
+  background-color: #d5b893;
+}
+
+.analytics-card.done {
+  background-color: #6f4d38;
+}
+
+.analytics-card.pending {
+  background-color: #632024;
+}
+
+/* Taux */
+.analytics-rate {
+  margin-top: 20px;
+}
